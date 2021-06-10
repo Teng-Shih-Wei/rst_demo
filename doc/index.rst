@@ -93,7 +93,7 @@ Other hardware features are not supported yet.
 
 Connections and IOs
 ==================
-------------------
+
 The ADP-XC7K board with AE350 SoC has 1 GPIO controller. It providing 32 bits of IO.
 It is responsible for pin input/output, pull-up, etc.
 
