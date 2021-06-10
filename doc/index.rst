@@ -17,19 +17,6 @@ controller, debug module, AXI and AHB Bus Matrix Controller, AXI-to-AHB Bridge
 and a collection of fundamental AHB/APB bus IP components pre-integrated
 together as a system design.
 
-The main AE350 components that interface with the external devices are:
-
-   - 2 UART ports
-   - 2 SPI ports
-   - 1 IIC port
-   - 1 SMC port
-   - 1 Ethernet port
-   - 1 LCD port
-   - 4 PWM channels
-   - 1 SD card port
-   - 1 32-bits GPIO
-   - 1 JTAG debug port
-
 .. figure:: img/adp_xc7k160.png
      :width: 442px
      :align: center
