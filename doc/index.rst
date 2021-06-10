@@ -219,8 +219,9 @@ If CONFIG_XIP=n, you can load the program (zephyr.elf) into RAM directly.
    (gdb) quit
 
 If CONFIG_XIP=y, you need to burn the program (zephyr.bin) into flash memory.
-You can download the package `AMZ_FREERTOS`_, and enter to the folder
-"<amazon-freertos>/vendors/andes/tools/".
+
+Download the package `AMZ_FREERTOS`_, and enter the folder
+"<amazon-freertos>/vendors/andes/tools/". Execute script to burn the program.
 
 .. code-block:: console
 
