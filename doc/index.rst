@@ -18,6 +18,7 @@ and a collection of fundamental AHB/APB bus IP components pre-integrated
 together as a system design.
 
 The main AE350 components that interface with the external devices are:
+
    - 2 UART ports
    - 2 SPI ports
    - 1 IIC port
@@ -91,69 +92,66 @@ The adp_xc7k_ae350 board configuration supports the following hardware features:
 Other hardware features are not supported yet.
 
 Connections and IOs
+==================
 ------------------
 The ADP-XC7K board with AE350 SoC has 1 GPIO controller. It providing 32 bits of IO.
 It is responsible for pin input/output, pull-up, etc.
 
 Mapping from GPIO controller to the ADP-XC7K Board pins:
 
-Buttons:
+Buttons
+-------
 
-.. rst-class:: rst-columns
+* GPIO.0 = sw1
+* GPIO.1 = sw2
+* GPIO.2 = sw3
+* GPIO.3 = sw4
+* GPIO.4 = sw5
+* GPIO.5 = sw6
+* GPIO.6 = sw7
+* GPIO.7 = sw8
 
-   - GPIO.0 : sw1
-   - GPIO.1 : sw2
-   - GPIO.2 : sw3
-   - GPIO.3 : sw4
-   - GPIO.4 : sw5
-   - GPIO.5 : sw6
-   - GPIO.6 : sw7
-   - GPIO.7 : sw8
+7-SEG LED
+---------
 
-7-SEG LEDs:
+* GPIO.16 = 7SEG1.A
+* GPIO.17 = 7SEG1.B
+* GPIO.18 = 7SEG1.C
+* GPIO.19 = 7SEG1.D
+* GPIO.20 = 7SEG1.E
+* GPIO.21 = 7SEG1.F
+* GPIO.22 = 7SEG1.G
+* GPIO.23 = 7SEG1.P
+* GPIO.24 = 7SEG2.A
+* GPIO.25 = 7SEG2.B
+* GPIO.26 = 7SEG2.C
+* GPIO.27 = 7SEG2.D
+* GPIO.28 = 7SEG2.E
+* GPIO.29 = 7SEG2.F
+* GPIO.30 = 7SEG2.G
+* GPIO.31 = 7SEG2.P
 
-.. rst-class:: rst-columns
+GPIO
+----
 
-   - GPIO.16 : 7SEG1.A
-   - GPIO.17 : 7SEG1.B
-   - GPIO.18 : 7SEG1.C
-   - GPIO.19 : 7SEG1.D
-   - GPIO.20 : 7SEG1.E
-   - GPIO.21 : 7SEG1.F
-   - GPIO.22 : 7SEG1.G
-   - GPIO.23 : 7SEG1.P
-   - GPIO.24 : 7SEG2.A
-   - GPIO.25 : 7SEG2.B
-   - GPIO.26 : 7SEG2.C
-   - GPIO.27 : 7SEG2.D
-   - GPIO.28 : 7SEG2.E
-   - GPIO.29 : 7SEG2.F
-   - GPIO.30 : 7SEG2.G
-   - GPIO.31 : 7SEG2.P
+* GPIO.8 = IDE_CON1.6
+* GPIO.9 = IDE_CON1.8
+* GPIO.10 = IDE_CON1.10
+* GPIO.11 = IDE_CON1.11
+* GPIO.12 = IDE_CON1.12
+* GPIO.13 = IDE_CON1.13
+* GPIO.14 = IDE_CON1.14
+* GPIO.15 = IDE_CON1.15
 
-GPIO:
+Peripheral Mapping
+------------------
 
-.. rst-class:: rst-columns
-
-   - GPIO.8 : IDE_CON1.6
-   - GPIO.9 : IDE_CON1.8
-   - GPIO.10 : IDE_CON1.10
-   - GPIO.11 : IDE_CON1.11
-   - GPIO.12 : IDE_CON1.12
-   - GPIO.13 : IDE_CON1.13
-   - GPIO.14 :IDE_CON1.14
-   - GPIO.15 :IDE_CON1.15
-
-Peripheral Mapping:
-
-.. rst-class:: rst-columns
-
-   - SPI_2_CS : IDE_CON1.37
-   - SPI_2_MOSI : IDE_CON1.36
-   - SPI_2_MISO : IDE_CON1.38
-   - SPI_2_SCLK : IDE_CON1.35
-   - I2C_SDA : J27.1
-   - I2C_SCL : J27.2
+* SPI_2_CS = IDE_CON1.37
+* SPI_2_MOSI = IDE_CON1.36
+* SPI_2_MISO = IDE_CON1.38
+* SPI_2_SCLK = IDE_CON1.35
+* I2C_SDA = J27.1
+* I2C_SCL = J27.2
 
 System Clock
 ------------
@@ -170,8 +168,8 @@ settings are 115200 8N1.
 Programming and debugging
 *************************
 
-For debugging zephyr applications or burning them to a flash, you will need to 
-execute the Andes ICE management software, ICEman, on a host computer that's 
+For debugging zephyr applications or burning them to a flash, you will need to
+execute the Andes ICE management software, ICEman, on a host computer that's
 connected with ADP-XC7K Board.
 
 Connecting Andes AICE
@@ -184,9 +182,9 @@ connector on the ADP-XC7K board, the toolchain can be used with the GNU Debugger
 .. figure:: img/connect_jtag.png
      :width: 442px
      :align: center
-     :alt: connect JTAG
+     :alt: Connect JTAG
 
-**Figure 3. connect JTAG**
+**Figure 3. Connect JTAG**
 
 Building
 ========
