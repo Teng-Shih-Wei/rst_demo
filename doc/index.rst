@@ -37,7 +37,7 @@ Hardware
 The ADP-XC7K board with AE350 SoC integrates a 60MHz 32-bit or 64-bit RISC-V CPU, DSP,
 1GB RAM, SPI flash memory, and other peripherals.
 
-The ADP-XC7K board with AE350 SoC provides following hardware compents:
+The ADP-XC7K board with AE350 SoC provides following hardware components:
 
    - 32-bit or 64-bit AndeStar v5 RISC-V CPU
    - Memory
