@@ -17,6 +17,8 @@ controller, debug module, AXI and AHB Bus Matrix Controller, AXI-to-AHB Bridge
 and a collection of fundamental AHB/APB bus IP components pre-integrated
 together as a system design.
 
+Figure 1 shows the green PCB is ADP-XC7K160 and Figure 2 shows the red PCB is ADP-XC7K410.
+
 .. figure:: img/adp_xc7k160.png
      :width: 442px
      :align: center
