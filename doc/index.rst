@@ -29,7 +29,7 @@ together as a system design.
      :alt: ADP-XC7K410
 
 
-More information can be found on `ADP-XC7K160/410`_ and `ANDESHAPE_AE350`_ websites.
+More information can be found on `ADP-XC7K160/410`_ and `AndeShape AE350`_ websites.
 
 Hardware
 ********
@@ -187,7 +187,7 @@ Flashing
 ========
 
 Before flashing, we have to download and set up ICEman. You can download it from
-`AWS_DEVELOPMENT_TOOLS_PKG`_. To set up ICEman, please refer `SET_UP_ICEMAN`_.
+`AWS development tools`_. To set up ICEman, please refer `set up ICEman`_.
 
 After setting up ICEman, you can launch ICEman by executing the command:
 
@@ -207,7 +207,7 @@ If CONFIG_XIP=n, you can load the program (zephyr.elf) into RAM directly.
 
 If CONFIG_XIP=y, you need to burn the program (zephyr.bin) into flash memory.
 
-Download the package `AMZ_FREERTOS`_, and enter the folder
+Download the package `amazon-freertos`_, and enter the folder
 "<amazon-freertos>/vendors/andes/tools/". Execute script to burn the program.
 
 .. code-block:: console
@@ -250,11 +250,11 @@ References
 
 .. _ADP-XC7K160/410: http://www.andestech.com/en/products-solutions/andeshape-platforms/adp-xc7k160-410/
 
-.. _ANDESHAPE_AE350: http://www.andestech.com/en/products-solutions/andeshape-platforms/ae350-axi-based-platform-pre-integrated-with-n25f-nx25f-a25-ax25/
+.. _AndeShape AE350: http://www.andestech.com/en/products-solutions/andeshape-platforms/ae350-axi-based-platform-pre-integrated-with-n25f-nx25f-a25-ax25/
 
-.. _AWS_DEVELOPMENT_TOOLS_PKG: https://github.com/andestech/aws_development_tools
+.. _AWS development tools: https://github.com/andestech/aws_development_tools
 
-.. _AMZ_FREERTOS: https://github.com/andestech/amazon-freertos
+.. _amazon-freertos: https://github.com/andestech/amazon-freertos
 
-.. _SET_UP_ICEMAN: https://github.com/andestech/amazon-freertos/blob/master/vendors/andes/boards/corvette_f1_n25/Getting_Started_Guide_Corvette-F1_N25.md#set-up-iceman
+.. _set up ICEman: https://github.com/andestech/amazon-freertos/blob/master/vendors/andes/boards/corvette_f1_n25/Getting_Started_Guide_Corvette-F1_N25.md#set-up-iceman
 
