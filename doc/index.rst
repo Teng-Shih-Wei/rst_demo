@@ -129,12 +129,15 @@ GPIO
 
 Other peripheral mapping are listed below:
 
-Peripheral Mapping
+SPI
 
 * SPI_2_CS = IDE_CON1.37
 * SPI_2_MOSI = IDE_CON1.36
 * SPI_2_MISO = IDE_CON1.38
 * SPI_2_SCLK = IDE_CON1.35
+
+I2C
+
 * I2C_SDA = J27.1
 * I2C_SCL = J27.2
 
