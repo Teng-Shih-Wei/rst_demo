@@ -157,19 +157,20 @@ For debugging zephyr applications or burning them to a flash, you will need to
 execute the Andes ICE management software, ICEman, on a host computer that's
 connected with ADP-XC7K Board.
 
-Connecting Andes AICE
-=====================
+Connecting Andes ICE(AICE)
+==========================
 
-With Andes ICE management software “ICEman” that interfaces with the JTAG
-connector on the ADP-XC7K board, the toolchain can be used with the GNU Debugger
-(GDB) for debugging, and the burner can burn the binary to flash.
+AICE is used for flashing and debugging the board. Please connect AICE to both
+ADP-XC7K board and the host computer like Figure 3.
 
-.. figure:: img/connect_jtag.png
+.. figure:: img/connect_aice.png
      :width: 442px
      :align: center
-     :alt: Connect JTAG
+     :alt: Connect AICE
 
-**Figure 3. Connect JTAG**
+**Figure 3. Connect AICE**
+
+More information can be found on `AICE-MINI+`_, `AICE-MICRO`_ website
 
 Building
 ========
@@ -184,19 +185,22 @@ the "hello_world" application.
 Flashing
 ========
 
+With Andes ICE management software “ICEman” that interfaces with the JTAG
+connector on the ADP-XC7K board, the toolchain can be used with the GNU Debugger
+(GDB) for debugging, and the burner can burn the binary to flash.
+
 Before flashing, we have to download and set up ICEman. You can download it from
 `AWS development tools`_. To set up ICEman, please refer `set up ICEman`_.
 
-After setting up ICEman, you can launch ICEman by executing the command:
-
-.. code-block:: console
-
-   ./ICEman -Z v5
+If you program is built for executing in place, you need download the package
+`amazon-freertos`_, and use burner in "<amazon-freertos>/vendors/andes/tools/"
+folder.
 
 If CONFIG_XIP=n, you can load the program (zephyr.elf) into RAM directly.
 
 .. code-block:: console
 
+   ./ICEman -Z v5
    ./riscv64-zephyr-elf-gdb zephyr/zephyr.elf
    (gdb) target remote :1111
    (gdb) monitor reset halt
@@ -205,11 +209,9 @@ If CONFIG_XIP=n, you can load the program (zephyr.elf) into RAM directly.
 
 If CONFIG_XIP=y, you need to burn the program (zephyr.bin) into flash memory.
 
-Download the package `amazon-freertos`_, and enter the folder
-"<amazon-freertos>/vendors/andes/tools/". Execute script to burn the program.
-
 .. code-block:: console
 
+   ./ICEman -Z v5
    ./target_burn_linux.sh <zephyr_application_build_folder>/zephyr/zephyr.bin
 
 Open a serial terminal with the following settings:
@@ -249,6 +251,10 @@ References
 .. _ADP-XC7K160/410: http://www.andestech.com/en/products-solutions/andeshape-platforms/adp-xc7k160-410/
 
 .. _AndeShape AE350: http://www.andestech.com/en/products-solutions/andeshape-platforms/ae350-axi-based-platform-pre-integrated-with-n25f-nx25f-a25-ax25/
+
+.. _AICE-MINI+: http://www.andestech.com/en/products-solutions/andeshape-platforms/aice-mini/
+
+.. _AICE-MICRO: http://www.andestech.com/en/products-solutions/andeshape-platforms/aice-micro/
 
 .. _AWS development tools: https://github.com/andestech/aws_development_tools
 
