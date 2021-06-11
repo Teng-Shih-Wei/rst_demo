@@ -87,7 +87,6 @@ It is responsible for pin input/output, pull-up, etc.
 Mapping from GPIO controller to the ADP-XC7K Board pins:
 
 Buttons
--------
 
 * GPIO.0 = sw1
 * GPIO.1 = sw2
@@ -99,7 +98,6 @@ Buttons
 * GPIO.7 = sw8
 
 7-SEG LED
----------
 
 * GPIO.16 = 7SEG1.A
 * GPIO.17 = 7SEG1.B
@@ -119,7 +117,6 @@ Buttons
 * GPIO.31 = 7SEG2.P
 
 GPIO
-----
 
 * GPIO.8 = IDE_CON1.6
 * GPIO.9 = IDE_CON1.8
@@ -130,8 +127,9 @@ GPIO
 * GPIO.14 = IDE_CON1.14
 * GPIO.15 = IDE_CON1.15
 
+Other peripheral mapping are listed below:
+
 Peripheral Mapping
-------------------
 
 * SPI_2_CS = IDE_CON1.37
 * SPI_2_MOSI = IDE_CON1.36
