@@ -197,7 +197,7 @@ connector on the ADP-XC7K board, the toolchain can be used with the GNU Debugger
 Before flashing, we have to download and set up ICEman. You can download it from
 `AWS development tools`_. To set up ICEman, please refer `set up ICEman`_.
 
-If you program is built for executing in place, you need download the package
+If your program is built for executing in place, you need download the package
 `amazon-freertos`_, and use burner in "<amazon-freertos>/vendors/andes/tools/"
 folder.
 
@@ -263,7 +263,6 @@ References
 
 .. _AWS development tools: https://github.com/andestech/aws_development_tools
 
-.. _amazon-freertos: https://github.com/andestech/amazon-freertos
-
 .. _set up ICEman: https://github.com/andestech/amazon-freertos/blob/master/vendors/andes/boards/corvette_f1_n25/Getting_Started_Guide_Corvette-F1_N25.md#set-up-iceman
 
+.. _amazon-freertos: https://github.com/andestech/amazon-freertos
